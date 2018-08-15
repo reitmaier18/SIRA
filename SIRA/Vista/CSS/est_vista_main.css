@@ -470,6 +470,24 @@ section{
 	margin: 1%;	
 }
 
+#actualizacion_usuario{
+	background-color: #f4f6f7;
+	opacity: 0.8;
+	/*border: solid #922b21;*/
+	display: none;	
+}
+
+#actualizacion_usuario h2{
+	background-color:  #922b21;
+	color: #FFFFFF;	
+	padding: 1%;
+	margin: 0%;	
+}
+
+#actualizacion_usuario form{
+	margin-left: 1%;
+}
+
 #modal_mod_user{
 	background: rgba(0, 0, 0, 0.9);
 	position: fixed;

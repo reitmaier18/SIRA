@@ -57,7 +57,7 @@
 					<ul id="Herramienta">
 						<hr>
 						<li onclick="mostrar_crear_usuario();" class="adduser"><a href="#">Creación de Usuario</a></li>
-						<li onclick="mostrar_updateuser();" class="updateuser"><a href="#">Actualización de Usuario</a></li>
+						<li onclick="mostrar_actualizacion_usuario();" class="updateuser"><a href="#">Actualización de Usuario</a></li>
 						<li class="deleteuser"><a href="#">Cerrar cuenta de Usuario</a></li>
 					</ul>
 				</li>
@@ -424,6 +424,17 @@
 						<input type="submit" value="Guardar">&nbsp<input type="reset" value="Cancelar"><br><br>	
 					</center>
 				</div>
+			</form>
+		</div>
+		<div id="actualizacion_usuario"><h2>Actualización de Usuario</h2>
+			<form action="#" method="#">
+				<br>
+				Cédula de Identidad<br>
+					<label>
+						<select name="nac">
+							<option value="V-">V</option>
+							<option value="E-">E</option>
+						</select></label><input type="text" name="cedula" placeholder="00000000" size="14"> <input type="submit" value="Buscar"><br><br><br>
 			</form>
 		</div>			
 	</section>
