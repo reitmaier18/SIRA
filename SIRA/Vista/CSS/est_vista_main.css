@@ -1,0 +1,542 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-size: cover;
+	background-position: absolute;
+	background-image: url(../Imagenes/Fondo6.jpg);
+	background-color: rgb(200,200,200);
+	background-blend-mode: soft-light;
+	font-family: "Lato", sans-serif;
+}
+
+header{
+	width: 100%;
+	height: 35%;
+	background-color:  #1b2631;
+}
+
+img{
+	margin-left: 1%;
+	width: 5%;
+	position: absolute;
+}
+
+h2{
+	color: #C6C4C4;
+	width: 10% 90%;
+    padding: 1.25%;
+    opacity: 1.0;
+    margin-left: 6%;
+    position: relative;
+}
+
+header h2:hover{
+	color: #FFFFFF;
+}
+
+nav{
+	background-color:  #5d6d7e;
+	width: 100%;
+}
+
+nav ul{
+	list-style: none;
+	text-align: right;
+	width: 100%;
+	height: 100%;
+}
+
+nav ul li{
+	display: inline-block;
+	margin: 1px 0px 1px 0px;
+	text-align: center;
+	padding: 0.5%;
+}
+
+nav ul li a{
+	width: 100%;
+	height: 100%;
+	margin-right: 20px;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+nav ul li:hover{
+	background-color: #aeb6bf;
+}
+
+.Inicio{
+	background: url(../Imagenes/Icon61.png) no-repeat right;
+}
+
+.Cerrar{
+	background: url(../Imagenes/Icon62.png) no-repeat right;
+}
+
+aside{
+	display: block;
+	position: absolute;
+	background-color:  #f2f3f3;
+	margin-top: 0%;
+	margin-left: 0%;
+	width: 20%;
+	height: 85.5%;
+	opacity: 1;	
+}
+
+#menu{
+	background-color: #f2f3f3;
+	opacity: 0.7;
+	/*border:solid #21618c;*/
+}
+
+#menu h3{
+	background-color:  #21618c;
+	color: #FFFFFF;	
+	padding: 1%;
+	margin: 0%;
+}
+
+#menu ul{
+	list-style: none;
+	width: 100%;
+	height: 100%;
+}
+
+#menu ul li{
+	margin-left: 2px;
+	
+}
+
+#menu ul li a{
+	padding: 1%;
+	display: block;
+	line-height: 25px;
+	margin-left: 30px;
+	box-shadow:0em 0 rgba(176, 176, 210, 0.8) inset;
+    --webkit-transition: all 1.0s;
+    -o-transition:all 1.0s;
+    transition: all 1.0s;
+}
+
+#menu ul li ul{
+	display: none;
+	margin: 0%;
+}
+
+.Juridico{
+    background: url(../Imagenes/Icon1.png) no-repeat left;
+}
+
+.aentrada{
+	background: url(../Imagenes/Icon11.png) no-repeat left;	
+}
+
+.bnotificación{
+	background: url(../Imagenes/Icon12.png) no-repeat left;	
+}
+
+.apruebas{
+	background: url(../Imagenes/Icon13.png) no-repeat left;	
+}
+
+.aaperturacierre{
+	background: url(../Imagenes/Icon14.png) no-repeat left;	
+}
+
+.rexpediente{
+	background: url(../Imagenes/Icon15.png) no-repeat left;	
+}
+
+.nsecretarial{
+	background: url(../Imagenes/Icon16.png) no-repeat left;	
+}
+
+.Administrativo{
+	background: url(../Imagenes/Icon2.png) no-repeat left;	
+}
+
+.memrec{
+	background: url(../Imagenes/Icon21.png) no-repeat left;	
+}
+
+.memenv{
+	background: url(../Imagenes/Icon22.png) no-repeat left;	
+}
+
+.ofirec{
+	background: url(../Imagenes/Icon23.png) no-repeat left;	
+}
+
+.ofienv{
+	background: url(../Imagenes/Icon24.png) no-repeat left;	
+}
+
+.Expediente{
+	background: url(../Imagenes/Icon4.png) no-repeat left;	
+}
+
+.Estadisticas{
+	background: url(../Imagenes/Icon5.png) no-repeat left;	
+}
+
+.Herramienta{
+	background: url(../Imagenes/Icon3.png) no-repeat left;	
+}
+
+.adduser{
+	background: url(../Imagenes/Icon31.png) no-repeat left;	
+}
+
+.updateuser{
+	background: url(../Imagenes/Icon32.png) no-repeat left;	
+}
+
+.deleteuser{
+	background: url(../Imagenes/Icon33.png) no-repeat left;	
+}
+
+#menu ul li a:hover{
+	color: #FFFFFF;
+	box-shadow: 20.0em 0 rgba(75, 136, 252, 0.9) inset;
+    --webkit-transition: all .5s;
+    -o-transition:all .5s;
+    transition: all .5s;
+}
+
+#menu ul li ul li{
+	background-color:#f4f6f7;
+	margin: 0%;
+}
+
+#menu li a{
+	text-decoration: none;
+	color: #1b2631;
+	margin-left: 5%;
+}
+
+#menu li:hover{
+	color: #FFFFFF;
+}
+
+section{
+	display: inline-block;
+	position: relative;
+	margin-top: 3.5%;
+	margin-left: 25%;
+	width: 70%;
+	opacity: 0.9;
+	
+}
+
+#inicio{
+	background-color: #f4f6f7;
+
+	opacity: 0.8;
+	/*border: solid #922b21;*/
+}
+
+#inicio h2{
+	background-color:  #922b21;
+	color: #FFFFFF;	
+	padding: 1%;
+	margin: 0%;
+	opacity: 1;
+}
+
+#inicio p{
+	margin: 1%; 
+	/*color: #FFFFFF;*/
+}
+
+#Auto_entrada{
+	background-color: #f4f6f7;
+	/*border: solid #922b21;*/
+	opacity: 0.8;
+	display: none;
+}
+
+#Auto_entrada h2{
+	background-color:  #922b21;
+	color: #FFFFFF;	
+	padding: 1%;
+	margin: 0%;
+}
+
+#Auto_entrada form{
+	margin-left: 2%;
+}
+
+#Boletas{
+	background-color: #f4f6f7;
+	/*border: solid #922b21;*/
+	opacity: 0.8;
+	display: none;	
+}
+
+#Boletas h2{
+	background-color:  #922b21;
+	color: #FFFFFF;	
+	padding: 1%;
+	margin: 0%;
+}
+
+#Boletas form{
+	margin-left: 2%;
+}
+
+#Pruebas{
+	background-color: #f4f6f7;
+	/*border: solid #922b21;*/
+	opacity: 0.8;
+	display: none;
+}
+
+#Pruebas h2{
+	background-color:  #922b21;
+	color: #FFFFFF;	
+	padding: 1%;
+	margin: 0%;
+}
+
+#Pruebas form{
+	margin-left: 2%;
+}
+
+#Apertura{
+	background-color: #f4f6f7;
+	/*border: solid #922b21;*/
+	opacity: 0.8;
+	display: none;
+}
+
+#Apertura h2{
+	background-color:  #922b21;
+	color: #FFFFFF;	
+	padding: 1%;
+	margin: 0%;	
+}
+
+#Apertura form{
+	margin-left: 2%;	
+}
+
+#Remision{
+	background-color: #f4f6f7;
+	/*border: solid #922b21;*/
+	opacity: 0.8;
+	display: none;	
+}
+
+#Remision h2{
+	background-color:  #922b21;
+	color: #FFFFFF;	
+	padding: 1%;
+	margin: 0%;	
+}
+
+#Remision form{
+	margin-left: 2%;	
+}
+
+#Nsecretarial{
+	background-color: #f4f6f7;
+	/*border: solid #922b21;*/
+	opacity: 0.8;
+	display: none;	
+}
+
+#Nsecretarial h2{
+	background-color:  #922b21;
+	color: #FFFFFF;	
+	padding: 1%;
+	margin: 0%;	
+}
+
+#Nsecretarial form{
+	margin-left: 2%;	
+}
+
+#Memo_recibido{
+	background-color: #f4f6f7;
+	opacity: 0.8;
+	/*border: solid #922b21;*/
+	display: none;	
+}
+
+#Memo_recibido h2{
+	background-color:  #922b21;
+	color: #FFFFFF;	
+	padding: 1%;
+	margin: 0%;	
+}
+
+#Memo_enviado{
+	background-color: #f4f6f7;
+	opacity: 0.8;
+	/*border: solid #922b21;*/
+	display: none;	
+}
+
+#Memo_enviado h2{
+	background-color:  #922b21;
+	color: #FFFFFF;	
+	padding: 1%;
+	margin: 0%;	
+}
+
+#Oficio_recibido{
+	background-color: #f4f6f7;
+	opacity: 0.8;
+	/*border: solid #922b21;*/
+	display: none;	
+}
+
+#Oficio_recibido h2{
+	background-color:  #922b21;
+	color: #FFFFFF;	
+	padding: 1%;
+	margin: 0%;	
+}
+
+#Oficio_enviado{
+	background-color: #f4f6f7;
+	opacity: 0.8;
+	/*border: solid #922b21;*/
+	display: none;	
+}
+
+#Oficio_enviado h2{
+	background-color:  #922b21;
+	color: #FFFFFF;	
+	padding: 1%;
+	margin: 0%;	
+}
+
+#Expediente{
+	background-color: #f4f6f7;
+	opacity: 0.8;
+	/*border: solid #922b21;*/
+	display: none;	
+}
+
+#Expediente h2{
+	background-color:  #922b21;
+	color: #FFFFFF;	
+	padding: 1%;
+	margin: 0%;	
+}
+
+#Expediente p{
+	margin: 1%;
+}
+
+#Estadisticas{
+	background-color: #f4f6f7;
+	opacity: 0.8;
+	/*border: solid #922b21;*/
+	display: none;	
+}
+
+#Estadisticas h2{
+	background-color:  #922b21;
+	color: #FFFFFF;	
+	padding: 1%;
+	margin: 0%;	
+}
+
+#Estadisticas p{
+	margin: 1%;
+}
+
+#creacion_usuario{
+	background-color: #f4f6f7;
+	opacity: 0.8;
+	/*border: solid #922b21;*/
+	display: none;	
+}
+
+#creacion_usuario h2{
+	background-color:  #922b21;
+	color: #FFFFFF;	
+	padding: 1%;
+	margin: 0%;	
+}
+
+#creacion_usuario p{
+	margin: 1%;	
+}
+
+#modal_mod_user{
+	background: rgba(0, 0, 0, 0.9);
+	position: fixed;
+	top: -100vh;
+	left: 0;
+	display: none;
+	height: 100vh;
+	width: 100vw;
+	transition: all .5s;
+
+}
+
+#modal_mod_user div{
+	width: 60%;
+	height: 40%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	background: #f4f6f7;
+	opacity: 0.8;
+}
+
+#modal_mod_user div h2{
+	background-color:  #922b21;
+	color: #FFFFFF;	
+	padding: 1%;
+	margin: 0%;	
+}
+
+#modal_mod_user table{
+	border-spacing: 0;
+	border-collapse: collapse;
+	margin-top: 5%;
+}
+
+#modal_mod_user th{
+	font-weight: bold;
+	background: lightgrey;
+}
+
+
+#cerrar_updateuser{
+	display: none;
+}
+
+#cerrar_updateuser + label{
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	z-index: 100;
+	color: black;
+	cursor: pointer;
+	font-weight: bold;
+	color: #FFFFFF;
+	background: #922b21;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border-radius: 50%; 
+}
+
+
+
+#cerrar_updateuser: checked ~ #modal_mod_user{
+	top: -100vh;
+}

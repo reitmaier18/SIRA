@@ -1,0 +1,44 @@
+scrip para Crear base de datos
+------------------------------------
+CREATE DATABASE SIRA;
+CREATE TABLE usuario ( id serial not null, nombre varchar(20), apellido varchar(20), nacionalidad varchar(2), cedula integer, perfil varchar(20), usuario varchar(10), constraint id_usuario primary key(id));
+
+CREATE TABLE seguridad ( id serial not null, password varchar(20), usuario_id integer, constraint id_seguridad primary key(id), constraint usuario_fk foreign key(usuario_id) references usuario (id));
+
+CREATE TABLE dependencia ( id serial not null, nombre_dependencia varchar(30), usuario_id integer, constraint id_dependencia primary key(id), constraint usuario_fk foreign key(usuario_id) references usuario (id));
+
+CREATE TABLE sustanciacion ( id serial not null, dependencia_id integer, constraint id_sustanciacion primary key(id), constraint dependencia_fk foreign key(dependencia_id) references dependencia (id));
+
+CREATE TABLE nota_secretarial ( id serial not null, sustanciacion_id integer, numero_nota varchar(30), asunto varchar(100), resumen_nota varchar(2000), constraint id_nota_secretarial primary key(id), constraint sustanciacion_fk foreign key(sustanciacion_id) references sustanciacion(id));
+
+CREATE TABLE memo_enviado ( id serial not null, dependencia_id integer, sustanciacion_id integer, fecha_memo_enviado date, numero_memo varchar(30), asunto_memo_enviado varchar(100), constraint id_memo_enviado primary key(id), constraint dependencia_fk foreign key(dependencia_id) references dependencia(id), constraint sustanciacion_fk foreign key(sustanciacion_id) references sustanciacion(id));
+
+CREATE TABLE memo_recibido ( id serial not null, dependencia_id integer, sustanciacion_id integer, fecha_memo_recibido date, numero_memo_recibido varchar(30), asunto_memo_recibido varchar(100), constraint id_memo_recibido primary key(id), constraint dependencia_fk foreign key (dependencia_id) references dependencia(id), constraint sustanciacion_fk foreign key (sustanciacion_id) references sustanciacion(id));
+
+CREATE TABLE institucion ( id serial not null, nombre_institucion varchar(30), constraint id_institucion primary key(id));
+
+CREATE TABLE oficio_recibido ( id serial not null, sustanciacion_id integer, institucion_id integer, fecha_oficio_recibido date, numero_oficio_recibido varchar(30), asunto_oficio_recibido varchar(100), constraint id_oficio_recibido primary key (id), constraint sustanciacion_fk foreign key (sustanciacion_id) references sustanciacion(id), constraint institucion_fk foreign key (institucion_id) references institucion(id));
+
+CREATE TABLE oficio_enviado ( id serial not null, sustanciacion_id integer, institucion_id integer, fecha_oficio_enviado date, numero_oficio_enviado varchar(30), asunto_oficio_enviado varchar(100), constraint id_oficio_enviado primary key(id), constraint sustanciacion_fk foreign key(sustanciacion_id) references sustanciacion(id), constraint institucion_fk foreign key(institucion_id) references institucion(id));
+
+CREATE TABLE auto_entrada ( id serial not null, fecha_auto_entrada date, numero_expediente varchar(30), acusado_nombre varchar(20), acusado_apellido varchar(20), constraint id_auto_entrada primary key(id));
+
+CREATE TABLE tipo_boleta ( id serial not null, tipo_boleta varchar(10), constraint id_tipo_boleta primary key(id));
+
+CREATE TABLE notificado ( id serial not null, nombre_notificado varchar(20), apellido_notificado varchar(20), nacionalidad_notificado varchar(2), cedula integer, dirección_notificado varchar(200), constraint id_notificado primary key(id));
+
+CREATE TABLE boleta ( id serial not null, tipo_boleta_id integer, notificado_id integer, numero_boleta varchar(20), fecha_boleta date, constraint id_boleta primary key(id), constraint tipo_boleta_fk foreign key(tipo_boleta_id) references tipo_boleta(id), constraint notificado_fk foreign key(notificado_id) references notificado(id));
+
+CREATE TABLE prueba ( id serial not null, tipo_prueba varchar(30), resumen_prueba varchar(2000), constraint id_prueba primary key(id));
+
+CREATE TABLE admision_prueba ( id serial not null, prueba_id integer,fecha_admision_prueba date, constraint id_admision_prueba primary key(id), constraint prueba_fk foreign key(prueba_id) references prueba(id));
+
+CREATE TABLE auto_apertura_cierre ( id serial not null, fecha_auto date, tipo_auto varchar(20), resumen_auto varchar(2000), constraint id_auto_apertura_cierre primary key(id));
+
+CREATE TABLE expediente ( id serial not null, auto_entrada_id integer, admision_prueba_id integer, boleta_id integer, auto_apertura_cierre_id integer, constraint id_expediente primary key(id), constraint auto_entrada_fk foreign key(auto_entrada_id) references auto_entrada(id), constraint admision_prueba_fk foreign key(admision_prueba_id) references admision_prueba(id), constraint boleta_fk foreign key(boleta_id) references boleta(id), constraint auto_apertura_cierre_fk foreign key(auto_apertura_cierre_id) references auto_apertura_cierre(id));
+
+CREATE TABLE remision_expediente ( id serial not null, expediente_id integer, resumen_remision varchar(2000), constraint id_remision_expediente primary key(id), constraint expediente_fk foreign key(expediente_id) references expediente(id));
+
+#Consultas de la base de datos:
+--------------------------------------------
+
