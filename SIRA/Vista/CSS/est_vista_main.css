@@ -488,73 +488,20 @@ section{
 	margin-left: 1%;
 }
 
-#modal_mod_user{
-	background: rgba(0, 0, 0, 0.9);
-	position: fixed;
-	top: -100vh;
-	left: 0;
-	display: none;
-	height: 100vh;
-	width: 100vw;
-	transition: all .5s;
-
-}
-
-#modal_mod_user div{
-	width: 60%;
-	height: 40%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	margin: auto;
-	background: #f4f6f7;
+#eliminar_usuario{
+	background-color: #f4f6f7;
 	opacity: 0.8;
+	/*border: solid #922b21;*/
+	display: none;	
 }
 
-#modal_mod_user div h2{
+#eliminar_usuario h2{
 	background-color:  #922b21;
 	color: #FFFFFF;	
 	padding: 1%;
 	margin: 0%;	
 }
 
-#modal_mod_user table{
-	border-spacing: 0;
-	border-collapse: collapse;
-	margin-top: 5%;
-}
-
-#modal_mod_user th{
-	font-weight: bold;
-	background: lightgrey;
-}
-
-
-#cerrar_updateuser{
-	display: none;
-}
-
-#cerrar_updateuser + label{
-	position: absolute;
-	right: 1em;
-	top: 1em;
-	z-index: 100;
-	color: black;
-	cursor: pointer;
-	font-weight: bold;
-	color: #FFFFFF;
-	background: #922b21;
-	width: 25px;
-	height: 25px;
-	line-height: 25px;
-	text-align: center;
-	border-radius: 50%; 
-}
-
-
-
-#cerrar_updateuser: checked ~ #modal_mod_user{
-	top: -100vh;
+#eliminar_usuario form{
+	margin-left: 1%;
 }

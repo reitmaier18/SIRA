@@ -17,6 +17,7 @@ function mostrarInicio(){
 	document.getElementById("Estadisticas").style.display="none";
 	document.getElementById("creacion_usuario").style.display="none";
 	document.getElementById("actualizacion_usuario").style.display="none";
+	document.getElementById("eliminar_usuario").style.display="none";
 }
 
 function mostrarJuridico(){
@@ -54,6 +55,7 @@ function mostrar_aentrada(){
 	document.getElementById("Estadisticas").style.display="none";
 	document.getElementById("creacion_usuario").style.display="none";
 	document.getElementById("actualizacion_usuario").style.display="none";
+	document.getElementById("eliminar_usuario").style.display="none";
 }
 
 function mostrar_bnotificacion() {
@@ -72,6 +74,7 @@ function mostrar_bnotificacion() {
 	document.getElementById("Estadisticas").style.display="none";
 	document.getElementById("creacion_usuario").style.display="none";
 	document.getElementById("actualizacion_usuario").style.display="none";
+	document.getElementById("eliminar_usuario").style.display="none";
 }
 
 function mostrar_apruebas(){
@@ -90,6 +93,7 @@ function mostrar_apruebas(){
 	document.getElementById("Estadisticas").style.display="none";	
 	document.getElementById("creacion_usuario").style.display="none";
 	document.getElementById("actualizacion_usuario").style.display="none";
+	document.getElementById("eliminar_usuario").style.display="none";
 }
 
 function mostrar_aaperturacierre(){
@@ -107,7 +111,8 @@ function mostrar_aaperturacierre(){
 	document.getElementById("Oficio_enviado").style.display="none";
 	document.getElementById("Estadisticas").style.display="none";
 	document.getElementById("creacion_usuario").style.display="none";
-	document.getElementById("actualizacion_usuario").style.display="none";	
+	document.getElementById("actualizacion_usuario").style.display="none";
+	document.getElementById("eliminar_usuario").style.display="none";	
 }
 
 function mostrar_remision(){
@@ -126,6 +131,7 @@ function mostrar_remision(){
 	document.getElementById("Estadisticas").style.display="none";
 	document.getElementById("creacion_usuario").style.display="none";
 	document.getElementById("actualizacion_usuario").style.display="none";	
+	document.getElementById("eliminar_usuario").style.display="none";
 }
 
 function mostrar_nsecretarial(){
@@ -143,7 +149,8 @@ function mostrar_nsecretarial(){
 	document.getElementById("Oficio_enviado").style.display="none";
 	document.getElementById("Estadisticas").style.display="none";
 	document.getElementById("creacion_usuario").style.display="none";
-	document.getElementById("actualizacion_usuario").style.display="none";	
+	document.getElementById("actualizacion_usuario").style.display="none";
+	document.getElementById("eliminar_usuario").style.display="none";	
 }
 
 function mostrar_memrec(){
@@ -162,6 +169,7 @@ function mostrar_memrec(){
 	document.getElementById("Estadisticas").style.display="none";
 	document.getElementById("creacion_usuario").style.display="none";
 	document.getElementById("actualizacion_usuario").style.display="none";
+	document.getElementById("eliminar_usuario").style.display="none";
 }
 
 function mostrar_memenv(){
@@ -180,6 +188,7 @@ function mostrar_memenv(){
 	document.getElementById("Estadisticas").style.display="none";
 	document.getElementById("creacion_usuario").style.display="none";
 	document.getElementById("actualizacion_usuario").style.display="none";
+	document.getElementById("eliminar_usuario").style.display="none";
 }
 
 function mostrar_oficrec(){
@@ -198,6 +207,7 @@ function mostrar_oficrec(){
 	document.getElementById("Estadisticas").style.display="none";
 	document.getElementById("creacion_usuario").style.display="none";
 	document.getElementById("actualizacion_usuario").style.display="none";
+	document.getElementById("eliminar_usuario").style.display="none";
 }
 
 function mostrar_oficenv(){
@@ -216,10 +226,11 @@ function mostrar_oficenv(){
 	document.getElementById("Estadisticas").style.display="none";
 	document.getElementById("creacion_usuario").style.display="none";
 	document.getElementById("actualizacion_usuario").style.display="none";
+	document.getElementById("eliminar_usuario").style.display="none";
 }
 
 function mostrarExpediente(){
-	document.getElementById("Expediente").style.display="block";
+	
 	document.getElementById("inicio").style.display="none";
 	document.getElementById("Auto_entrada").style.display="none";
 	document.getElementById("Boletas").style.display="none";
@@ -234,9 +245,11 @@ function mostrarExpediente(){
 	document.getElementById("Juridico").style.display="none";
 	document.getElementById("Administrativo").style.display="none";
 	document.getElementById("Herramienta").style.display="none";
+	document.getElementById("Expediente").style.display="block";
 	document.getElementById("Estadisticas").style.display="none";
 	document.getElementById("creacion_usuario").style.display="none";
 	document.getElementById("actualizacion_usuario").style.display="none";
+	document.getElementById("eliminar_usuario").style.display="none";
 }
 
 function mostrar_estadisticas(){
@@ -258,6 +271,7 @@ function mostrar_estadisticas(){
 	document.getElementById("Herramienta").style.display="none";
 	document.getElementById("creacion_usuario").style.display="none";
 	document.getElementById("actualizacion_usuario").style.display="none";
+	document.getElementById("eliminar_usuario").style.display="none";
 }
 
 function mostrar_crear_usuario(){
@@ -275,7 +289,8 @@ function mostrar_crear_usuario(){
 	document.getElementById("Oficio_enviado").style.display="none";
 	document.getElementById("Estadisticas").style.display="none";
 	document.getElementById("creacion_usuario").style.display="block";
-	document.getElementById("actualizacion_usuario").style.display="none";	
+	document.getElementById("actualizacion_usuario").style.display="none";
+	document.getElementById("eliminar_usuario").style.display="none";	
 }
 
 function mostrar_actualizacion_usuario(){
@@ -293,14 +308,25 @@ function mostrar_actualizacion_usuario(){
 	document.getElementById("Oficio_enviado").style.display="none";
 	document.getElementById("Estadisticas").style.display="none";
 	document.getElementById("creacion_usuario").style.display="none";
-	document.getElementById("actualizacion_usuario").style.display="block";	
+	document.getElementById("actualizacion_usuario").style.display="block";
+	document.getElementById("eliminar_usuario").style.display="none";	
 }
 
-function mostrar_updateuser(){
-	document.getElementById("modal_mod_user").style.display="block"
-	document.getElementById("modal_mod_user").style.top=0;
-}
-
-function cerrar_updateuser(){
-	document.getElementById("modal_mod_user").style.display= "none";	
+function mostrar_eliminar_usuario(){
+	document.getElementById("inicio").style.display="none";
+	document.getElementById("Auto_entrada").style.display="none";
+	document.getElementById("Boletas").style.display="none";
+	document.getElementById("Pruebas").style.display="none";
+	document.getElementById("Apertura").style.display="none";
+	document.getElementById("Remision").style.display="none";
+	document.getElementById("Nsecretarial").style.display="none";
+	document.getElementById("Expediente").style.display="none";	
+	document.getElementById("Memo_recibido").style.display="none";
+	document.getElementById("Memo_enviado").style.display="none";
+	document.getElementById("Oficio_recibido").style.display="none";
+	document.getElementById("Oficio_enviado").style.display="none";
+	document.getElementById("Estadisticas").style.display="none";
+	document.getElementById("creacion_usuario").style.display="none";
+	document.getElementById("actualizacion_usuario").style.display="none";
+	document.getElementById("eliminar_usuario").style.display="block";	
 }

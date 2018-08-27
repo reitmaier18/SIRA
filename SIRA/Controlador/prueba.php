@@ -1,4 +1,4 @@
 <?php 
-	$mensaje = $_REQUEST['men'];
+	$mensaje = $_REQUEST['cedula'];
 	echo $mensaje;
  ?>

@@ -4,8 +4,8 @@
 	 */
 	class db
 	{
-		private $usuario = 'sira';
-	 	private $password = 'admin';
+		private $usuario = 'postgres';
+	 	private $password = '123456';
 	
 		function _construct()
 		{
