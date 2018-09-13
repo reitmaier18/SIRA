@@ -70,7 +70,7 @@
 		</div>
 
 		<div id="Auto_entrada"><h2>Auto de Entrada</h2>
-			<form action="#">
+			<form method="post" action="../../Controlador/regis_aentr_contrl.php">
 				<div align="center">
 					<br>
 					<table>
@@ -97,7 +97,7 @@
 		</div>
 
 		<div id="Boletas"><h2>Boletas de Notificación</h2>
-			<form action="#">
+			<form action="../../Controlador/regis_bolet_contrl.php" method="post">
 				<div align="justify">
 					<br>
 					<center><table align="center">
@@ -152,7 +152,7 @@
 		</div>
 
 		<div id="Pruebas"><h2>Admisión de Pruebas</h2>
-			<form action="#">
+			<form action="#" method="post">
 				<div align="center">
 					<br>
 					<table>
@@ -175,7 +175,7 @@
 		</div>
 
 		<div id="Apertura"><h2>Auto de Apertura y Cierre</h2>
-			<form action="#">
+			<form action="../../Controlador/regis_aut_aper_cier_contrl.php" method="post">
 				<div align="center">
 					<br>
 					<table>
@@ -204,7 +204,7 @@
 		</div>
 
 		<div id="Remision"><h2>Remisión del Expediente</h2>
-			<form action="#">
+			<form action="../../Controlador/regis_remexpe_contrl.php" method="post">
 				<div align="center">
 					<br>
 					<table>
@@ -226,7 +226,7 @@
 		</div>
 
 		<div id="Nsecretarial"><h2>Nota Secretarial</h2>
-			<form action="#">
+			<form action="#" method="post">
 				<div align="center">
 					<br>
 					<table>
@@ -248,7 +248,7 @@
 		</div>
 
 		<div id="Memo_recibido"><h2>Memo Recibido</h2>
-			<form action="#">
+			<form action="../../Controlador/regis_memrec_contrl.php" method="post">
 				<div align="center">
 					<br>
 					<table>
@@ -262,7 +262,20 @@
 						</tr>
 						<tr>
 							<td>
-								Emitido por: <br><input type="text" name="dependencia"><br><br><br>
+								Emitido por: <br><label>
+													<select name="dependencia">
+														<?php 
+															require '../../Modelo/Clase/cnx.php';
+															$db = new db();
+															$db->_construct();
+															$sql = ("select id, nombre_dependencia from sir.dependencia");
+															$query = pg_query($sql);
+															while ($row = pg_fetch_row($query)) {
+																echo "<option value=$row[0]>$row[1]</option>";
+															}					
+														?>
+													</select>
+												</label><br><br><br>
 							</td>
 							<td>
 								&nbsp&nbsp&nbsp&nbsp Asunto <br> &nbsp&nbsp&nbsp&nbsp <input type="text" name="asunto"><br><br><br>	
@@ -277,7 +290,7 @@
 		</div>
 
 		<div id="Memo_enviado"><h2>Memo Enviado</h2>
-			<form action="#">
+			<form action="../../Controlador/regis_memenv_contrl.php" method="post">
 				<div align="center">
 					<br>
 					<table>
@@ -291,7 +304,17 @@
 						</tr>
 						<tr>
 							<td>
-								Recibido por: <br><input type="text" name="dependencia"><br><br><br>
+								Recibido por: <br><label>
+													<select name="dependencia">
+														<?php 
+															$sql = ("select id, nombre_dependencia from sir.dependencia");
+															$query = pg_query($sql);
+															while ($row = pg_fetch_row($query)) {
+																echo "<option value=$row[0]>$row[1]</option>";
+															}					
+														?>
+													</select>
+												</label><br><br><br>
 							</td>
 							<td>
 								&nbsp&nbsp&nbsp&nbsp Asunto <br> &nbsp&nbsp&nbsp&nbsp <input type="text" name="asunto"><br><br><br>	
@@ -306,7 +329,7 @@
 		</div>
 
 		<div id="Oficio_recibido"><h2>Oficio Recibido</h2>
-			<form action="#">
+			<form action="../../Controlador/regis_ofirec_contrl.php" method="post">
 				<div align="center">
 					<br>
 					<table>
@@ -320,7 +343,17 @@
 						</tr>
 						<tr>
 							<td>
-								Emitido por: <br><input type="text" name="Institución"><br><br><br>
+								Emitido por: <br><label>
+													<select name="institucion">
+														<?php 
+															$sql = ("select id, nombre_institucion from sir.institucion");
+															$query = pg_query($sql);
+															while ($row = pg_fetch_row($query)) {
+																echo "<option value=$row[0]	>$row[1]</option>";
+															}					
+														?>
+													</select>
+												</label><br><br><br>
 							</td>
 							<td>
 								&nbsp&nbsp&nbsp&nbsp Asunto <br> &nbsp&nbsp&nbsp&nbsp <input type="text" name="asunto"><br><br><br>	
@@ -335,7 +368,7 @@
 		</div>
 
 		<div id="Oficio_enviado"><h2>Oficio Enviado</h2>
-			<form action="#">
+			<form action="../../Controlador/regis_ofienv_contrl.php" method="post">
 				<div align="center">
 					<br>
 					<table>
@@ -349,7 +382,17 @@
 						</tr>
 						<tr>
 							<td>
-								Recibido por: <br><input type="text" name="institución"><br><br><br>
+								Recibido por: <br><label>
+													<select name="institucion">
+														<?php 
+															$sql = ("select id, nombre_institucion from sir.institucion");
+															$query = pg_query($sql);
+															while ($row = pg_fetch_row($query)) {
+																echo "<option value=$row[0]>$row[1]</option>";
+															}					
+														?>
+													</select>
+												</label><br><br><br>
 							</td>
 							<td>
 								&nbsp&nbsp&nbsp&nbsp Asunto <br> &nbsp&nbsp&nbsp&nbsp <input type="text" name="asunto"><br><br><br>	
@@ -364,7 +407,12 @@
 		</div>
 
 		<div id="Expediente"><h2>Expediente</h2>
-			<p align="justify">El elemento es de prueba</p>
+			<form>
+				<center>
+					<br>
+					<input type="text" name="expediente" placeholder="Numero de Expediente"><input type="submit" name="consutar" value="Consultar"><br><br>
+				</center>
+			</form>
 		</div>
 
 		<div id="Estadisticas"><h2>Estadisticas</h2>

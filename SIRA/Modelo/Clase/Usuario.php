@@ -41,23 +41,31 @@
 	 	{
 	 		$db=new db();
 	 		$db->_construct();
-	 		$sql= ("insert into sir.usuario (nombre, apellido, nacionalidad, cedula, perfil, usuario) values ('$nombre', '$apellido', '$nac', $cedula, '$perfil', '$user')");
+	 		$sql=("select * from sir.usuario where nacionalidad='$nac' and cedula='$cedula'");
 	 		$query=pg_query($sql);
 	 		if ($query==FALSE) {
-	 			echo "<script>alert('Error al cargar datos');</script>";
-	 		}
-	 		else{
-	 			$sql=("select id_usuario from sir.usuario where usuario='$user'");
-	 			$query=pg_query($sql);
-	 			$fila= pg_fetch_array($query, 0, PGSQL_NUM);
-	 			$sql=("insert into sir.seguridad (password,usuario_id) values ('$contraseña', '$fila[0]')");
-	 			header ('Location:../Vista/admin/main.php');
+	 			$sql= ("insert into sir.usuario (nombre, apellido, nacionalidad, cedula, perfil, usuario) values ('$nombre', '$apellido', '$nac', $cedula, '$perfil', '$user')");
 	 			$query=pg_query($sql);
 	 			if ($query==FALSE) {
-	 				echo "<script>alert('Error al cargar contraseña');</script>";
+	 				echo "<script>alert('Error al cargar datos');</script>";
 	 			}
+	 			else{
+	 				$sql=("select id_usuario from sir.usuario where usuario='$user'");
+	 				$query=pg_query($sql);
+	 				$fila= pg_fetch_array($query, 0, PGSQL_NUM);
+	 				$sql=("insert into sir.seguridad (password,usuario_id) values ('$contraseña', '$fila[0]')");
+	 				header ('Location:../Vista/admin/main.php');
+	 				$query=pg_query($sql);
+	 				if ($query==FALSE) {
+	 					echo "<script>alert('Error al cargar contraseña');</script>";
+	 				}
+	 			}
+	 			$db->_destruct();
 	 		}
-	 		$db->_destruct();
+	 		else{
+	 			echo "<script>alert('Error al cargar datos, usuario ya registrado');</script>";
+	 		}
+	 		
 	 	}
 
 	 	function update($nac,$ced)
